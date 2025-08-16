@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function ElementaryPage() {
   return (
     <main className="font-sans bg-white text-[#2D3748] min-h-screen">
-      <section className="bg-gradient-to-br from-[#0F766E] to-[#14B8A6] px-4 text-white h-screen flex items-center justify-center">
+      <section className="bg-linear-to-br from-[#0F766E] to-[#14B8A6] px-4 text-white h-screen flex items-center justify-center" id="hero">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Elementary</h1>
           <p className="text-lg italic">

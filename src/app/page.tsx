@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function HomePage() {
   return (
     <main className="font-sans bg-white text-[#2D3748]">
-      <section className="bg-gradient-to-br from-[#0F766E] to-[#14B8A6] text-white px-4 h-screen flex items-center justify-center" id="hero">
+      <section className="bg-linear-to-br from-[#0F766E] to-[#14B8A6] text-white px-4 h-screen flex items-center justify-center" id="hero">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Sekolah Plus Latansa</h1>
           <p className="text-lg max-w-xl mx-auto">

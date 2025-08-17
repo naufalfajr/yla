@@ -15,7 +15,7 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const heroHeight = window.innerHeight; // Assuming hero is full screen height
+      const heroHeight = window.innerHeight * 2; // Assuming hero is full screen height
       
       // Check if we're in hero section (transparent)
       setIsTransparent(currentScrollY < heroHeight);

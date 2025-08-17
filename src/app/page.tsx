@@ -3,8 +3,13 @@ import { Button } from "@/components/ui/button";
 export default function HomePage() {
   return (
     <main className="font-sans bg-white text-[#2D3748]">
-      <section className="bg-linear-to-br from-[#0F766E] to-[#14B8A6] text-white px-4 h-screen flex items-center justify-center" id="hero">
-        <div className="max-w-4xl mx-auto text-center">
+      <video autoPlay muted loop playsInline className="fixed top-0 w-full h-screen object-cover" poster="/smp.jpeg">
+        <source src="/smp.webm" type="video/webm" />
+      </video>
+      <div className="fixed top-0 w-full h-screen bg-black/50"></div>
+      
+      <section className="relative h-screen flex items-center justify-center overflow-hidden" id="hero">
+        <div className="relative max-w-4xl mx-auto text-center text-white px-4">
           <h1 className="text-4xl font-bold mb-4">Sekolah Plus Latansa</h1>
           <p className="text-lg max-w-xl mx-auto">
             Kami membimbing anak-anak untuk menjadi pribadi yang unggul dalam karakter dan prestasi.
@@ -12,7 +17,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#F0FDFA] px-4 h-screen flex items-center justify-center" id="achievements">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden" id="hero-2">
+        <div className="relative max-w-4xl mx-auto text-center text-white px-4">
+          <h2 className="text-3xl font-bold mb-6">Membangun Masa Depan Cemerlang</h2>
+          <p className="text-lg max-w-2xl mx-auto mb-8">
+            Melalui pendidikan berkualitas dan pembentukan karakter yang kuat, kami mempersiapkan generasi unggul untuk menghadapi tantangan masa depan.
+          </p>
+          <Button className="bg-[#0F766E] text-white hover:bg-[#14B8A6] px-8 py-3 text-lg" asChild>
+            <a href="/enroll">Mulai Perjalanan Belajar</a>
+          </Button>
+        </div>
+      </section>
+
+      <section className="relative bg-[#F0FDFA] px-4 h-screen flex items-center justify-center" id="achievements">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-6 text-[#0F766E]">Prestasi Terbaru</h2>
           <p className="text-md text-[#374151] mb-6">
@@ -21,7 +38,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white px-4 h-screen flex items-center justify-center" id="plus-points">
+      <section className="relative bg-white px-4 h-screen flex items-center justify-center" id="plus-points">
         <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-3 text-center">
           <div>
             <h3 className="text-xl font-semibold text-[#0F766E] mb-2">Iman & Akhlak</h3>
@@ -38,9 +55,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#F0FDFA] px-4 h-screen flex items-center justify-center" id="edu-level">
+      <section className="relative bg-[#F0FDFA] px-4 h-screen flex items-center justify-center" id="edu-level">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold text-[#0F766E] mb-6">Jelajahi Jenjang Pendidikan</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-[#0F766E]">Jelajahi Jenjang Pendidikan</h2>
           <div className="flex flex-col md:flex-row justify-center gap-4">
             <Button variant="outline" className="bg-white text-[#0F766E] border-[#0F766E] hover:bg-[#CCFBF1] hover:border-[#14B8A6] hover:text-[#14B8A6]" asChild>
               <a href="/preschool">Preschool</a>

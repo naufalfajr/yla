@@ -7,7 +7,7 @@ export default function ElementaryPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Elementary</h1>
           <p className="text-lg italic">
-            "Education is the most powerful weapon you can use to change the world." — Nelson Mandela
+            &quot;Education is the most powerful weapon you can use to change the world.&quot; — Nelson Mandela
           </p>
         </div>
       </section>

@@ -1,6 +1,21 @@
 import { Button } from "@/components/ui/button";
+import RecentNews from "@/components/RecentNews";
 
-export default function HomePage() {
+export default async function HomePage() {
+  // Fetch news on the server (outside the client component)
+  let items = [];
+  try {
+    const res = await fetch(`${process.env.API_HOST}/articles`, { cache: "no-store" });
+    if (res.ok) {
+      const response = await res.json();
+      items = Array.isArray(response.data) ? response.data : [];
+    } else {
+      console.error("Failed to load /api/articles:", res.status);
+    }
+  } catch (err) {
+    console.error("Error fetching /api/articles:", err);
+  }
+
   return (
     <main className="font-sans bg-white text-[#2D3748]">
       <video autoPlay muted loop playsInline className="fixed top-0 w-full h-screen object-cover" poster="/smp.jpeg">
@@ -35,6 +50,13 @@ export default function HomePage() {
           <p className="text-md text-[#374151] mb-6">
             Juara 1 Lomba Sains Nasional 2025 oleh siswa Elementary - Alif Rahman
           </p>
+        </div>
+      </section>
+
+      <section className="relative bg-white px-4 h-screen flex items-center justify-center" id="news">
+        <div className="max-w-5xl mx-auto w-full">
+          <h2 className="text-2xl font-semibold mb-6 text-[#0F766E]">Berita Terbaru</h2>
+          <RecentNews items={items} />
         </div>
       </section>
 

@@ -7,7 +7,7 @@ export default function PreschoolPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Preschool</h1>
           <p className="text-lg italic">
-            "Play is the highest form of research." — Albert Einstein
+            &quot;Play is the highest form of research.&quot; — Albert Einstein
           </p>
         </div>
       </section>

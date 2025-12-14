@@ -7,7 +7,7 @@ export default function MiddleSchoolPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4">Middle School</h1>
           <p className="text-lg italic">
-            "Develop a passion for learning. If you do, you will never cease to grow." — Anthony J. D'Angelo
+            &quot;Develop a passion for learning. If you do, you will never cease to grow.&quot; — Anthony J. D&apos;Angelo
           </p>
         </div>
       </section>

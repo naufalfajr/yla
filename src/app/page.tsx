@@ -5,7 +5,13 @@ export default async function HomePage() {
   // Fetch news on the server (outside the client component)
   let items = [];
   try {
-    const res = await fetch(`${process.env.API_HOST}/articles`, { cache: "no-store" });
+    const token = (process.env.CMS_TOKEN)? `Bearer ${process.env.CMS_TOKEN}` : "";
+    const headers: Record<string, string> = {
+      "Content-Type": "application/json",
+      "Authorization": token
+    };
+    console.log(`Headers:`, headers);
+    const res = await fetch(`${process.env.API_HOST}/articles`, { cache: "no-store", headers });
     if (res.ok) {
       const response = await res.json();
       items = Array.isArray(response.data) ? response.data : [];

@@ -5,10 +5,9 @@ export default async function HomePage() {
   // Fetch news on the server (outside the client component)
   let items = [];
   try {
-    const token = (process.env.CMS_TOKEN)? `Bearer ${process.env.CMS_TOKEN}` : "";
     const headers: Record<string, string> = {
       "Content-Type": "application/json",
-      "Authorization": token
+      ...(process.env.CMS_TOKEN ? { Authorization: `Bearer ${process.env.CMS_TOKEN}` } : {}),
     };
     console.log(`Headers:`, headers);
     const res = await fetch(`${process.env.API_HOST}/articles`, { cache: "no-store", headers });
